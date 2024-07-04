@@ -1,0 +1,16 @@
+server:
+  port: 7071
+
+spring:
+  application:
+    name: human-resource-manager-service
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://localhost:5432/spring_rbac_hrms
+    username: postgres
+    password: root
+    initialization-mode: always
+  jpa:
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+    hibernate:
+      ddl-auto: update
