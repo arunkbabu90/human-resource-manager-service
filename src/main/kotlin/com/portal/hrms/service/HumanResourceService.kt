@@ -27,7 +27,6 @@ class HumanResourceServiceImpl(
     private val acs: AccessControlService
 ) : HumanResourceService {
 
-
     override fun getAllEmployees(): List<Employee> = employeeRepository.findAllByOrderByEmpIdAsc()
 
 

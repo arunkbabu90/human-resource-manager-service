@@ -25,6 +25,12 @@ class HumanResourceControllerImpl(
     private val passwordEncoder: PasswordEncoder
 ) : HumanResourceController {
 
+    @GetMapping("/user/create")
+    @PreAuthorize("hasPermission(null, 'USER_CREATE')")
+    fun userCreate(): ResponseEntity<Any> {
+        return ResponseEntity("User Create", HttpStatus.OK)
+    }
+
     @PreAuthorize("hasPermission(null, '${READ}')")
     @GetMapping("/all")
     override fun getAllEmployees(): List<GetEmployeeResponse> {
