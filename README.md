@@ -9,3 +9,9 @@ Technologies Used:
 * RBAC
 * Simple JWT Token Based Authentication and Authorization
 * PostgreSQL DB
+
+# Setup
+* Install PostgreSQL; you can install it from official website https://www.postgresql.org/download/ OR install via Docker
+* Go to /src/main/resources/application.yml
+* Replace the <i><b>port</b></i> in  <b>jdbc:postgresql://localhost:<i><b><<port>port></b></i>/<database_name></b>  with the port of your PostgreSQL and <b><i><database_name></i></b> with the database name
+* Run the application using <b>HumanResourceManagerServiceApplication.kt</b>
